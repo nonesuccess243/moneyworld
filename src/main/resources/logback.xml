@@ -1,0 +1,21 @@
+<configuration scan="true">
+
+	<property name="log_path" value="\\var\\javaweb\\log\\" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%logger{72}] - %msg
+				[%caller{1}]
+			</pattern>
+		</encoder>
+	</appender>
+
+
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+
+	
+
+</configuration>
